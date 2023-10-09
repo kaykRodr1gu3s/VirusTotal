@@ -2,7 +2,7 @@ import requests
 import os
 
 api_key = 'api_key'
-path = os.getcwd()+'\\python-3.11.5-amd64.exe' 
+path = os.getcwd()+'\\python-3.11.5-amd64.exe'  # here you need to put the file.exe that you want to upload for get the data from them. in the example i put the python installer 
 
 def getting_link(endpoint, path):
     global api_key
