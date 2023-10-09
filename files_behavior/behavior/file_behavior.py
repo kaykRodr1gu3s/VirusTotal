@@ -1,21 +1,46 @@
 import requests
 import os
 
+api_key = 'type your API here'
+file_name = 'python-3.11.5-amd64.exe'
 
+def get_sha256(api, file_name):
+
+
+    endpoint = 'https://www.virustotal.com/vtapi/v2/file/scan'
+    params = {'apikey': api}
+    files = { "file": (file_name, open(file_name, "rb"), "application/x-msdownload") }
+    
+
+    response = requests.post(endpoint, files=files, params=params)
+    json = response.json()
+    json = json['sha256']
+
+
+    return json
+
+
+id = get_sha256(api_key, file_name)
+
+
+def file_behavior(api_key, id):
+ 
+    url = f"https://www.virustotal.com/api/v3/files/{id }/behaviour_summary"
+ 
+    headers = {
+        "accept": "application/json",
+        "x-apikey": api_key
+    }
+ 
+    response = requests.get(url, headers=headers)
+ 
+    datas_for_saved = response.json()
+ 
+    return datas_for_saved
+
+
+datas_for_saved = file_behavior(api_key, id) 
 path = os.getcwd() + '\\files_behavior\\behavior'
-url = "https://www.virustotal.com/api/v3/files/1bb46f65bb6f71b295801c8ff596bb5b69fa4c0645541db5f3d3bac33aa6eade/behaviour_summary"
-
-api_key = 'type here your api'
-
-headers = {
-    "accept": "application/json",
-    "x-apikey": "api_key"
-}
-
-response = requests.get(url, headers=headers)
-
-datas_for_saved = response.json()
-
 
 
 with open(f'{path}\\behavior.txt', 'w') as f:
@@ -30,13 +55,13 @@ with open(f'{path}\\behavior.txt', 'w') as f:
     f.write(' \n')
     for c in datas_for_saved['data']['files_deleted']:
         f.write(c + '\n')
-
+ 
     f.write(' \n')
     f.write('-='* 10 + 'processes created' + '-='*20 + '\n')
     f.write(' \n')
     for c in datas_for_saved['data']['processes_created']:
         f.write(c + '\n')
-
+ 
     f.write(' \n')
     f.write('-='* 10 + 'files opened' + '-='*20 + '\n')
     f.write(' \n')

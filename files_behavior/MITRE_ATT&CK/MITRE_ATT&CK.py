@@ -35,8 +35,6 @@ class MITRE_ATTACK:
 
 
     def getting_sha256(self):
-
-
         params = {
             'apikey': self.API_KEY,
         }
@@ -45,20 +43,15 @@ class MITRE_ATTACK:
         files = {'file': (f'{self.file_name}', open(path, 'rb'))}
         response = requests.post(self.base_endpoint + 'vtapi/v2/file/scan', files=files, params=params)
 
-
-
         data = response.json()
         
         
         identifier = data['sha256']
         
-        return identifier
-        
-    
+        return identifier   
     
     
     def Mitre(self):
-        
 
         identifier = self.getting_sha256()
     
@@ -66,7 +59,6 @@ class MITRE_ATTACK:
         "accept": "application/json",
         "x-apikey": self.API_KEY
                     }
-    
     
         response = requests.get(self.base_endpoint + f'api/v3/files/{identifier}/behaviour_mitre_trees', headers=headers)
     
@@ -81,37 +73,29 @@ class MITRE_ATTACK:
 
         sandboxes = []
         tat_tech = []
-        test = self.Mitre()
-    
+        instance = self.Mitre()    
 
-        for key in test:
+        for key in instance:
             sandboxes.append(key)
-    
     
         for sandbox in sandboxes:
     
-    
-            data_json = test[sandbox]
+            data_json = instance[sandbox]
             data_json = data_json['tactics']
            
-            for value in data_json:
-    
+            for value in data_json:    
     
                 both_tat_tech = []
                 tactics = []
                 Techniques = []
-    
-    
+        
                 tactics.append(value['name'])
                 tactics.append(value['id'])
                 tactics.append(value['link'])
-    
-    
-                both_tat_tech.append(tactics)
-                
+        
+                both_tat_tech.append(tactics)        
     
                 value = value['techniques']
-                
                         
                 for tec in value:
     
@@ -120,11 +104,9 @@ class MITRE_ATTACK:
                     Techniques.append(value['id'])
                     Techniques.append(value['link'])
     
-    
                     both_tat_tech.append(Techniques[:])
     
                     Techniques.clear()
-    
     
                 tat_tech.append(both_tat_tech)
         
@@ -139,9 +121,6 @@ header = ['Name', 'Techniques/Tactics', 'Link(See on Mitre)']
 
 
 mitre = MITRE_ATTACK('API key','example(python-3.11.5-amd64.exe)')
-
-
-
 
 
 create_file = ' '

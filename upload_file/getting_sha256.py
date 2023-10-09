@@ -1,17 +1,13 @@
 import requests
 
+url = 'https://www.virustotal.com/vtapi/v2/file/scan'
 
-
-url = "https://www.virustotal.com/api/v3/files"
+params = {'apikey': '<apikey>'}
 
 files = { "file": ("python-3.11.5-amd64.exe", open("python-3.11.5-amd64.exe", "rb"), "application/x-msdownload") }
-headers = {
-    "accept": "application/json",
-    "x-apikey": "type here your api"
-}
 
-response = requests.post(url, files=files, headers=headers)
+response = requests.post(url, files=files, params=params)
 
-resp = response.json()
+response = response.json()
 
-print(resp)
+print(response['sha256'])
