@@ -2,7 +2,7 @@ import requests
 import os
 
 api_key = 'type your API here'
-file_name = 'python-3.11.5-amd64.exe'
+file_name = 'example(python-3.11.5-amd64.exe)'
 
 def get_sha256(api, file_name):
 
