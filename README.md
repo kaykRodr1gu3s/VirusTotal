@@ -12,10 +12,10 @@
 # How to use
 
   + You choice a file.exe, and put in the same directory
-  + where is with the name <b> python-3.11.5-amd64.exe</b>, put your file.exe. I left the python-3.11.5-amd64.exe as example.
-  +  After who you do this choice, execute the code. If some mistakes happend, check if the file name is rigth
+  + The code will ask to you the file.exe name. I left the <b> python-3.11.5-amd64.exe</b> as example.
+  +  After who you put the file in the directory, execute the code. If you have some mistakes happend, check if the file name is rigth or the file.exe is in directory
 
-
+---
 ## Libraries
 library for install
 
