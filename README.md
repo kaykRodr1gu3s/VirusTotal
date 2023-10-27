@@ -1,13 +1,13 @@
 # Virustotal
 
-O Script realiza um upload de um arquivo .exe para a plataforma do virustotal, assim realizando pesquisas sobre este arquivo e coletando todos os seus comportamento.
+O Script realiza o upload de um arquivo .exe para a plataforma do VirusTotal, realizando pesquisas sobre este arquivo e coletando todos os seus comportamentos observados pela sandbox do VirusTotal, e táticas e técnicas do MITRE ATT&CK.
 
 ---
 
 
 ## Como usar 
 
-### Cecessários
+### Necessários
 
 * virustotal API KEY
 * arquivo executável
@@ -25,4 +25,10 @@ O Script realiza um upload de um arquivo .exe para a plataforma do virustotal, a
 
 ### executação do código 
 Logo após você ter sua API e o executável estiver no diretório, basta apenas executar. Você precisará inserir a sua API e o nome do arquivo como entrada. Isso será mostrado em sua tela, e será possível ver um exemplo de como inserir o nome do seu executável.
-Haverá possibilidade de salvar todas as táticas e técnicas do MITRE ATT&CK e seus respectivos nomes em um csv, havera a opção para ser escolhida, se a opção for não ira 
+
+Haverá possibilidade de salvar todas as táticas e técnicas do MITRE ATT&CK e seus respectivos nomes em um .csv. Haverá outra opção para ser escolhida para salvar o comportamento de seu arquivo em um .txt. 
+
+
+# Como contribuir
+
+clone o repositório , após fazer as suas mudanças, efetue um pull request.
