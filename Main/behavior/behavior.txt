@@ -929,23 +929,6 @@ HKEY_LOCAL_MACHINE\Software\Classes\Installer\Dependencies\{0FEE67DA-831A-442F-A
 {'transport_layer_protocol': 'TCP', 'destination_ip': '104.86.182.43', 'destination_port': 443}
 {'transport_layer_protocol': 'UDP', 'destination_ip': '239.255.255.250', 'destination_port': 1900}
  
--=-=-=-=-=-=-=-=-=-=ip traffic-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-{'transport_layer_protocol': 'TCP', 'destination_ip': '209.197.3.8', 'destination_port': 80}
-{'transport_layer_protocol': 'TCP', 'destination_ip': '20.99.184.37', 'destination_port': 443}
-{'transport_layer_protocol': 'TCP', 'destination_ip': '192.229.211.108', 'destination_port': 80}
-{'transport_layer_protocol': 'TCP', 'destination_ip': '20.99.133.109', 'destination_port': 443}
-{'transport_layer_protocol': 'TCP', 'destination_ip': '20.99.186.246', 'destination_port': 443}
-{'transport_layer_protocol': 'TCP', 'destination_ip': '23.216.147.76', 'destination_port': 443}
-{'transport_layer_protocol': 'TCP', 'destination_ip': '23.216.147.64', 'destination_port': 443}
-{'transport_layer_protocol': 'TCP', 'destination_ip': '20.99.185.48', 'destination_port': 443}
-{'transport_layer_protocol': 'UDP', 'destination_ip': 'a83f:8110:0:0:1400:1400:2800:3800', 'destination_port': 53}
-{'transport_layer_protocol': 'TCP', 'destination_ip': '131.253.33.203', 'destination_port': 80}
-{'transport_layer_protocol': 'TCP', 'destination_ip': '23.216.81.152', 'destination_port': 80}
-{'transport_layer_protocol': 'UDP', 'destination_ip': 'a83f:8110:2800:1800:4000:1800:1800:100', 'destination_port': 53}
-{'transport_layer_protocol': 'UDP', 'destination_ip': 'a83f:8110:0:0:1400:0:0:0', 'destination_port': 53}
-{'transport_layer_protocol': 'TCP', 'destination_ip': '104.86.182.43', 'destination_port': 443}
-{'transport_layer_protocol': 'UDP', 'destination_ip': '239.255.255.250', 'destination_port': 1900}
- 
 -=-=-=-=-=-=-=-=-=-=processes tree-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  
 {'process_id': '2316', 'name': '%windir%\\System32\\svchost.exe -k WerSvcGroup'}
@@ -960,6 +943,7 @@ HKEY_LOCAL_MACHINE\Software\Classes\Installer\Dependencies\{0FEE67DA-831A-442F-A
 {'process_id': '8044', 'name': 'C:\\Users\\user\\Desktop\\python-3.11.5-amd64.exe', 'children': [{'process_id': '8084', 'name': '"C:\\Windows\\Temp\\{1485BF14-1EE9-405B-92E0-5A0895C24AA1}\\.cr\\python-3.11.5-amd64.exe" -burn.clean.room="C:\\Users\\user\\Desktop\\python-3.11.5-amd64.exe" -burn.filehandle.attached=652 -burn.filehandle.self=636 '}]}
  
 -=-=-=-=-=-=-=-=-=-=memory dumps-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ 
 {'process': 'C:\\Windows\\Temp\\{1485BF14-1EE9-405B-92E0-5A0895C24AA1}\\.cr\\python-3.11.5-amd64.exe', 'file_name': '00000001.00000003.988066363.0000000001051000.00000004.00000020.00020000.00000000.sdmp', 'size': '106496', 'base_address': '17108992', 'stage': 'MEM_STAGE_FREE'}
 {'process': 'C:\\Windows\\Temp\\{1485BF14-1EE9-405B-92E0-5A0895C24AA1}\\.cr\\python-3.11.5-amd64.exe', 'file_name': '00000001.00000002.1222687261.000000000532E000.00000004.00000010.00020000.00000000.sdmp', 'size': '8192', 'base_address': '87220224', 'stage': 'MEM_STAGE_EXIT'}
 {'process': 'C:\\Users\\user\\Desktop\\python-3.11.5-amd64.exe', 'file_name': '00000000.00000002.1221241613.0000000001020000.00000004.00000020.00020000.00000000.sdmp', 'size': '4096', 'base_address': '16908288', 'stage': 'MEM_STAGE_EXIT'}
@@ -1728,3 +1712,4 @@ C:\Users\Virtual\AppData\Local\Temp\1bb46f65bb6f71b295801c8ff596bb5b69fa4c064554
 "C:\Windows\Temp\{44866293-4130-4427-A213-A768D6D06484}\.cr\1bb46f65bb6f71b295801c8ff596bb5b69fa4c0645541db5f3d3bac33aa6eade.exe" -burn.clean.room="C:\Users\Virtual\AppData\Local\Temp\1bb46f65bb6f71b295801c8ff596bb5b69fa4c0645541db5f3d3bac33aa6eade.exe" -burn.filehandle.attached=196 -burn.filehandle.self=204 
 "C:\Windows\Temp\{B04BD7A7-A37F-4774-8FAD-291AD34DE7A3}\.cr\1bb46f65bb6f71b295801c8ff596bb5b69fa4c0645541db5f3d3bac33aa6eade.exe" -burn.clean.room="C:\Users\Virtual\AppData\Local\Temp\1bb46f65bb6f71b295801c8ff596bb5b69fa4c0645541db5f3d3bac33aa6eade.exe" -burn.filehandle.attached=196 -burn.filehandle.self=204 
 "C:\Windows\Temp\{A24C7F43-12B3-441C-96CF-64602B6D5014}\.cr\1bb46f65bb6f71b295801c8ff596bb5b69fa4c0645541db5f3d3bac33aa6eade.exe" -burn.clean.room="C:\Users\Virtual\AppData\Local\Temp\1bb46f65bb6f71b295801c8ff596bb5b69fa4c0645541db5f3d3bac33aa6eade.exe" -burn.filehandle.attached=192 -burn.filehandle.self=200 
+ 

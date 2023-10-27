@@ -1,10 +1,8 @@
 import requests
 import os
 
-api_key = str(input('type your API here'))
-print()
-print('example python-3.11.5-amd64.exe')
-file_name = str(input('put your file.exe name: '))
+api_key = 'type your API here'
+file_name = 'example(python-3.11.5-amd64.exe)'
 
 def get_sha256(api, file_name):
 
@@ -12,7 +10,7 @@ def get_sha256(api, file_name):
     endpoint = 'https://www.virustotal.com/vtapi/v2/file/scan'
     params = {'apikey': api}
     files = { "file": (file_name, open(file_name, "rb"), "application/x-msdownload") }
-
+    
 
     response = requests.post(endpoint, files=files, params=params)
     json = response.json()
