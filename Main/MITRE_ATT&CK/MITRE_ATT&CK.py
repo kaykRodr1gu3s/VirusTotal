@@ -172,10 +172,14 @@ while create_file not in 'YN':
             for value in list:
                 print(value)
 cont = ' '
+
+print('-=' * 20)
 while  cont not in 'YN':
     cont = str(input("do you wanna save the file behavior ? \nit can take a litle bit time\ny = yes\nn=not"))
     path = os.getcwd() + '\\Main\\behavior'
     if cont in 'Y':
+        print('creating file...')
+        print('saving the datas')
         names = ['files_attribute_changed' ,'files_deleted' ,'processes_created' ,
                 'files_opened' ,'registry_keys_set' ,'text_highlighted' ,
                 'modules_loaded' ,'registry_keys_opened' ,'ip_traffic' ,
