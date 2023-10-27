@@ -27,7 +27,7 @@ class MITRE_ATTACK:
         print('File created')
         print('-=' * 20)
 
-        dir_name = os.getcwd() + '\\files_behavior\\MITRE_ATT&CK'
+        dir_name = os.getcwd() + '\\Main\\MITRE_ATT&CK'
 
         
         return dir_name
@@ -121,7 +121,7 @@ header = ['Name', 'Techniques/Tactics', 'Link(See on Mitre)']
 
 api_key = str(input('type your api here: '))
 print()
-print('example(python-3.11.5-amd64.exe)')
+print('example (python-3.12.0-amd64.exe)')
 file_name = str(input('put your file name: '))
 mitre = MITRE_ATTACK(api_key,file_name)
 
