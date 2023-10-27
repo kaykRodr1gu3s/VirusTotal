@@ -112,8 +112,24 @@ class MITRE_ATTACK:
         
 
         return tat_tech
-       
-     
+
+
+    def file_behavior(self):
+
+        id = self.getting_sha256()
+        url = f"https://www.virustotal.com/api/v3/files/{id}/behaviour_summary"
+
+        headers = {
+            "accept": "application/json",
+            "x-apikey": self.API_KEY
+        }
+
+        response = requests.get(url, headers=headers)
+
+        datas_for_saved = response.json()
+
+        return datas_for_saved
+
 
 
 
@@ -139,8 +155,8 @@ while create_file not in 'YN':
         print('creating file...')
         print('saving the datas')
 
-
-        with open(f'{mitre.path()}\\{mitre.file_name}_MITRE_ATT&CK.csv', 'w', newline='') as f:
+        path = os.getcwd() + '\\main\\csv_files'
+        with open(f'{path}\\{mitre.file_name}_MITRE_ATT&CK.csv', 'w', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(header)
 
@@ -155,9 +171,29 @@ while create_file not in 'YN':
             
             for value in list:
                 print(value)
+cont = ' '
+while  cont not in 'YN':
+    cont = str(input("do you wanna save the file behavior ? \nit can take a litle bit time\ny = yes\nn=not"))
+    path = os.getcwd() + '\\Main\\behavior'
+    if cont in 'Y':
+        names = ['files_attribute_changed' ,'files_deleted' ,'processes_created' ,
+                'files_opened' ,'registry_keys_set' ,'text_highlighted' ,
+                'modules_loaded' ,'registry_keys_opened' ,'ip_traffic' ,
+                'processes_tree' ,'memory_dumps' ,'calls_highlighted' ,
+                'files_written' ,'files_dropped' ,'command_executions']
 
 
 
+        with open(f'{path}\\{mitre.file_name}.txt', 'w') as f:
+            for name in names:
+                f.write('-='* 10 + name.replace('_', ' ') + '-='*20 + '\n')
+                f.write(' \n')
+                for c in mitre.file_behavior()['data'][name]:
+                    f.write(f'{c}\n')
+
+                f.write(' \n')
+    else:
+        print('You do not want to save the behavior in a text file!')
 print('All the data has been colected')
 
 
