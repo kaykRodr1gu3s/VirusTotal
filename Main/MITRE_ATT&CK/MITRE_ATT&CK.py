@@ -198,6 +198,5 @@ while  cont not in 'YN':
                 f.write(' \n')
     else:
         print('You do not want to save the behavior in a text file!')
+        break
 print('All the data has been colected')
-
-
