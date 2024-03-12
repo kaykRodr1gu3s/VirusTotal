@@ -155,7 +155,7 @@ while create_file not in 'YN':
         print('creating file...')
         print('saving the datas')
 
-        path = os.getcwd() + '\\main\\csv_files'
+        path = os.getcwd() + '\\Main\\MITRE_ATT&CK'
         with open(f'{path}\\{mitre.file_name}_MITRE_ATT&CK.csv', 'w', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(header)

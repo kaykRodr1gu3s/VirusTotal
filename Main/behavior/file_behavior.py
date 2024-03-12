@@ -25,7 +25,7 @@ id = get_sha256(api_key, file_name)
 
 def file_behavior(api_key, id):
  
-    url = f"https://www.virustotal.com/api/v3/files/{id }/behaviour_summary"
+    url = f"https://www.virustotal.com/api/v3/files/{id}/behaviour_summary"
 
     headers = {
         "accept": "application/json",
