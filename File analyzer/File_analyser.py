@@ -27,7 +27,7 @@ class MITRE_ATTACK:
         print('File created')
         print('-=' * 20)
 
-        dir_name = os.getcwd() + '\\Main\\MITRE_ATT&CK'
+        dir_name = os.getcwd() + '\\file analyzer'
 
         
         return dir_name
@@ -147,7 +147,7 @@ create_file = ' '
 while create_file not in 'YN':
 
 
-    create_file = str(input("Do you wanna create a csv file with all data ?\ny = yes\nn = no\ntype here: ")).upper()
+    create_file = str(input("Do you wanna create a csv file with all data ?\ny = yes\nn = no\n\ntype here: ")).upper()
 
     if create_file in 'Y' or 'YES':
         
@@ -155,7 +155,7 @@ while create_file not in 'YN':
         print('creating file...')
         print('saving the datas')
 
-        path = os.getcwd() + '\\Main\\MITRE_ATT&CK'
+        path = os.getcwd() + '\\File analyzer\\csv_behavior'
         with open(f'{path}\\{mitre.file_name}_MITRE_ATT&CK.csv', 'w', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(header)
@@ -175,9 +175,9 @@ cont = ' '
 
 print('-=' * 20)
 while  cont not in 'YN':
-    cont = str(input("do you wanna save the file behavior ? \nit can take a litle bit time\ny = yes\nn=not"))
-    path = os.getcwd() + '\\Main\\behavior'
-    if cont in 'Y':
+    cont = str(input("do you wanna save the file behavior ? \nit can take a litle bit time\ny = yes\nn=not\n\nType here:"))
+    path = os.getcwd() + '\\File analyser\\csv_behavior'
+    if cont in 'Yy':
         print('creating file...')
         print('saving the datas')
         names = ['files_attribute_changed' ,'files_deleted' ,'processes_created' ,
@@ -195,8 +195,9 @@ while  cont not in 'YN':
                 for c in mitre.file_behavior()['data'][name]:
                     f.write(f'{c}\n')
 
-                f.write(' \n')
+                f.write(' \n')        
     else:
+        print('-=' * 30)
         print('You do not want to save the behavior in a text file!')
         break
 print('All the data has been colected')
