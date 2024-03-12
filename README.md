@@ -1,34 +1,50 @@
-# Virustotal
-
-O Script realiza o upload de um arquivo .exe para a plataforma do VirusTotal, realizando pesquisas sobre este arquivo e coletando todos os seus comportamentos observados pela sandbox do VirusTotal, e táticas e técnicas do MITRE ATT&CK.
-
----
+# VirusTotal
 
 
-## Como usar 
+## Index
 
-### Necessários
+1 - [Overview](#Overview)
 
-* virustotal API KEY
-* arquivo executável
+2 - [Requirements](#Requirements)
 
-### Como conseguir uma API KEY do virustotal
-  Logo após fazer o login na plataforma do VirusTotal, vá até a aba de API KEY.
-
-  ![Imagem do WhatsApp de 2023-10-26 à(s) 22 55 47_973bb533](https://github.com/kaykRodr1gu3s/VirusTotal/assets/110197812/8f5a8a2b-e8db-48ae-8ccd-4e9c9d935283)
-
-### Arquivo 
-
-* Para conseguir utilizar um arquivo diferente, sem ser o python-3.12.0-amd64.exe, basta apenas escolher um arquivo executável, e colocá-lo no mesmo diretorio de seu código. eu deixei o python-3.12.0-amd64.exe como apenas um exemplo
+3 - [How to use](#How-to-use)
 
 
+## Overview 
 
-### executação do código 
-Logo após você ter sua API e o executável estiver no diretório, basta apenas executar. Você precisará inserir a sua API e o nome do arquivo como entrada. Isso será mostrado em sua tela, e será possível ver um exemplo de como inserir o nome do seu executável.
+The Script uploads an .exe file to the VirusTotal platform, carrying out research on this file and collecting all its behaviors observed by the VirusTotal sandbox, and MITER ATT&CK tactics and techniques.
 
-Haverá possibilidade de salvar todas as táticas e técnicas do MITRE ATT&CK e seus respectivos nomes em um .csv. Haverá outra opção para ser escolhida para salvar o comportamento de seu arquivo em um .txt. 
+## Requirements
+
+You will need to install a python library, and you will need a API and a executable.
+
+### Python library
+
+To install the python library, just execute the code below:
+
+```
+pip install request
+```
+
+### Getting an API
+
+You need to [log-in](https://www.virustotal.com/gui/sign-in) in the VirusTotal. After go to the API KEY tab
+
+ ![Imagem do WhatsApp de 2023-10-26 à(s) 22 55 47_973bb533](https://github.com/kaykRodr1gu3s/VirusTotal/assets/110197812/8f5a8a2b-e8db-48ae-8ccd-4e9c9d935283)
 
 
-# Como contribuir
 
-clone o repositório , após fazer as suas mudanças, efetue um pull request.
+
+
+## How to use
+
+
+When you have your API KEY and your file .exe is on the directory, you need to execute the code. When you execute the code, you will put your API KEY and the file name in the terminal as input.
+
+
+
+
+
+
+
+
