@@ -36,11 +36,30 @@ You need to [log-in](https://www.virustotal.com/gui/sign-in) in the VirusTotal. 
 
 
 
-## How to use
+### How to use
 
 
 When you have your API KEY and your file .exe is on the directory, you need to execute the code. When you execute the code, you will put your API KEY and the file name in the terminal as input.
+When the process finishe, the files will be saved on [folder](https://github.com/kaykRodr1gu3s/VirusTotal/tree/main/File%20analyzer/csv_behavior).
 
+
+
+---
+
+## how to contribute
+ 1. Fork the repository.
+ 2. Create a branch for your contribution: `git checkout -b feature-nova`.
+ 3. Make the desired changes and commit: `git commit -m "Add new functionality"`.
+ 4. Push to your branch: `git push origin new-feature`.
+ 5. Open a pull request.
+
+
+
+
+## Contact
+
+- Linkedin: [Kayk Rodrigues](https://www.linkedin.com/in/kayk-rodrigues-504a03273)
+- Telegram: [Kayk Rodrigues](https://t.me/kaykRodrigues)
 
 
 
