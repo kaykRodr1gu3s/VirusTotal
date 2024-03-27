@@ -59,7 +59,6 @@ When the process finishe, the files will be saved on [folder](https://github.com
 ## Contact
 
 - Linkedin: [Kayk Rodrigues](https://www.linkedin.com/in/kayk-rodrigues-504a03273)
-- Telegram: [Kayk Rodrigues](https://t.me/kaykRodrigues)
 
 
 
