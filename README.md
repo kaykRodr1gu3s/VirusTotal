@@ -9,6 +9,9 @@
 
 3 - [How to use](#How-to-use)
 
+4- [How to contribute](#How-to-contribute)
+
+5 - [Contact](#Contact) 
 
 ## Overview 
 
@@ -46,7 +49,7 @@ When the process finishe, the files will be saved on [folder](https://github.com
 
 ---
 
-## how to contribute
+## How to contribute
  1. Fork the repository.
  2. Create a branch for your contribution: `git checkout -b feature-nova`.
  3. Make the desired changes and commit: `git commit -m "Add new functionality"`.
